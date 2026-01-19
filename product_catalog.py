@@ -67,5 +67,19 @@ for product in matching_products:
 # 1. What core operations did you use (e.g., intersections, loops)? Why?
 # 2. How might this code change if you had 1000+ products?
 """
+The core operations I used were mostly loops, sets, intersections, the len function, conditional statements, and the sorted function 
+to complete my code. I used loops consistently to run through the list of products and perform operations on each product. For example, 
+I used a loop to run through each product and turn the product tags list into a set. I used sets for quick comparison of the customer 
+preferences to the product tags using the intersection function, which identifies all the common tags between the two sets and adds them 
+to a new set. I turned this into an integer using the len function that determines the number of items in an object. I used a conditional 
+statement to pick out only the products that had at least one match with the customer preferences, and finally, I used the sorted function 
+with the dictionary key matches as the sort key to sort the remaining products by the number of matching tags they had.
 
+
+
+The main thing that would need to change if you had 1000+ products is to make sure you are being efficient in your code and not recomputing 
+or making unnecessary operations. Going from 50 to 1000 products is 20x the computing that must take place. I think my code, as it stands, is 
+very scalable. Using set operations with intersection is extremely quick, and the sort or sorted functions are about as efficient a sorting 
+algorithm as you can get in Python. Another consideration may be limiting the number of items that you print for user readability. If you had 
+a ton of products, the user is unlikely to scroll through all of them. You can easily limit the results using a for loop if you would like.
 """
